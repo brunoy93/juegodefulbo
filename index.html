@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070A08">
+<title>LEYENDA · Carrera de fútbol</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3 59 13v20c0 15-11 25-27 29C16 58 5 48 5 33V13z' fill='%23B8FF2E'/%3E%3Cpath d='M32 12 49 19v14c0 10-7 17-17 20-10-3-17-10-17-20V19z' fill='%23090D0A'/%3E%3Cpath d='M26 22h6v14h9v6H26z' fill='%23B8FF2E'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/estilo.css">
+<script>
+  window.__errores = [];
+  window.addEventListener('error', function (e) {
+    window.__errores.push({ m: e.message, f: (e.filename || '').split('/').pop(), l: e.lineno, c: e.colno });
+  });
+</script>
+</head>
+<body>
+
+<div id="inicio" class="inicio"></div>
+
+<div id="app" class="app oculto">
+  <aside class="sidebar">
+    <div class="marca">
+      <div class="marca-escudo">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 58 13v19c0 14-10 24-26 28C16 56 6 46 6 32V13z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M26 21h7v13h9v7H26z" fill="currentColor"/></svg>
+      </div>
+      <div class="marca-txt"><b>LEYENDA</b><span>Carrera de fútbol</span></div>
+    </div>
+    <nav id="nav" class="nav"></nav>
+    <div class="sidebar-pie">
+      <button class="nav-item" data-accion="guardar" title="Guardar carrera"><span class="ni">💾</span><span>Guardar</span></button>
+      <button class="nav-item" data-accion="menu" title="Menú"><span class="ni">☰</span><span>Menú</span></button>
+    </div>
+  </aside>
+
+  <div class="principal">
+    <header id="topbar" class="topbar"></header>
+    <main id="vista" class="vista"></main>
+  </div>
+</div>
+
+<div id="capa-modal" class="capa oculto" role="dialog" aria-modal="true"></div>
+<div id="capa-partido" class="capa-partido oculto"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<div id="carga" class="carga">
+  <div class="carga-logo">LEYENDA</div>
+  <div class="carga-barra"><i></i></div>
+</div>
+
+<script src="js/datos.js"></script>
+<script src="js/vida-datos.js"></script>
+<script src="js/motor.js"></script>
+<script src="js/partido.js"></script>
+<script src="js/vida.js"></script>
+<script src="js/juego.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ui-partido.js"></script>
+<script src="js/ui-perfil.js"></script>
+<script src="js/ui-vida.js"></script>
+</body>
+</html>
